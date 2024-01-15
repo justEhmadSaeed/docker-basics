@@ -2,9 +2,9 @@
 
 In this lesson, we will learn how to :
 
--   develop our first docker image
--   how to containerize it
--   how to interact with it
+-   [develop our first docker image](#how-to-evelop-a-docker-image)
+-   [how to containerize it](#how-to-containerize-it)
+-   [how to interact with it](#how-to-interact-with-it)
 
 ### How to Develop a docker image
 
