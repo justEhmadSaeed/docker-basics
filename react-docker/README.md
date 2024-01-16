@@ -4,12 +4,12 @@ In this lesson, we will learn about:
 
 -   RUN, USER and EXPOSE keywords
 -   How to expose a port to the container
--   How to do Port mapping
--   How to publish our docker image to Docker Hub
+-   [How to do Port mapping](#port-mapping)
+-   [How to publish our docker image to Docker Hub](#publish-our-docker-image)
 
 Check out the Dockerfile in this directory with self-explanatory comments.
 
-## Steps
+## Port Mapping
 
 -   To build the image:
 
@@ -29,6 +29,8 @@ docker run -p 5173:5173 react-docker
 ```bash
 docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules react-docker
 ```
+
+## Publish Our Docker Image
 
 -   To make our image accessible over the internet, we have to upload it to the [Docker Hub](https://hub.docker.com/). For that, we first need to tag our image with the following command:
 
@@ -51,6 +53,8 @@ docker login
 ```bash
 docker push ehmadsaeed/react-docker
 ```
+
+## Common Commands
 
 -   To enlist the running containers, we can use the following command:
 
