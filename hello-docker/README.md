@@ -6,11 +6,11 @@ In this lesson, we will learn how to :
 -   [how to containerize it](#how-to-containerize-it)
 -   [how to interact with it](#how-to-interact-with-it)
 
-### How to Develop a docker image
+### How to Develop a Docker Image
 
 1. Let's create a Dockerfile file in our app directory.
-2. Learn about the docker keywords like FROM, WORKDIR, COPY and CMD.
-3. Run the following command in t current hello-docker app directory to create our own local image.
+2. Learn about the docker keywords like FROM, WORKDIR, COPY, and CMD.
+3. Run the following command in the current hello-docker app directory to create our own local image.
 
 ```bash
 docker build -t <tag name> PATH_TO_DOCKERFILE
@@ -18,7 +18,7 @@ docker build -t <tag name> PATH_TO_DOCKERFILE
 docker build -t hello-docker .
 ```
 
-4. We can test our image by either confirming it from the images section of the docker desktop or run the following command:
+4. We can test our image by either confirming it from the images section of the docker desktop or running the following command:
 
 ```bash
 docker images

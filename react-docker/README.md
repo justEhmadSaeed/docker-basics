@@ -24,7 +24,7 @@ docker run -p 5173:5173 react-docker
 ```
 
 -   This container won't be listening to the changes in our code. To make it listen to our local code changes, we need to mount the current directory into the app directory of the container.
-    -v stands for volume which containers use to store data. `pwd` represents the directory where below command will be executed. The next /app/node_modules will create a volume for node_modules, so we don't have to install them everytime, we re-run the container.
+    -v stands for volume which containers use to store data. `pwd` represents the directory where the below command will be executed. The next /app/node_modules will create a volume for node_modules, so we don't have to install them every time, we re-run the container.
 
 ```bash
 docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules react-docker
