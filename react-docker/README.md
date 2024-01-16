@@ -5,10 +5,11 @@ In this lesson, we will learn about:
 -   RUN, USER and EXPOSE keywords
 -   How to expose a port to the container
 -   How to do Port mapping
+-   How to publish our docker image to Docker Hub
 
 Check out the Dockerfile in this directory with self-explanatory comments.
 
-## Commands
+## Steps
 
 -   To build the image:
 
@@ -22,13 +23,42 @@ docker build -t react-docker .
 docker run -p 5173:5173 react-docker
 ```
 
+-   This container won't be listening to the changes in our code. To make it listen to our local code changes, we need to mount the current directory into the app directory of the container.
+    -v stands for volume which containers use to store data. `pwd` represents the directory where below command will be executed. The next /app/node_modules will create a volume for node_modules, so we don't have to install them everytime, we re-run the container.
+
+```bash
+docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules react-docker
+```
+
+-   To make our image accessible over the internet, we have to upload it to the [Docker Hub](https://hub.docker.com/). For that, we first need to tag our image with the following command:
+
+```bash
+docker tag <image-source>:<tag> <username>/<image-name>:<tag>
+# in our case
+docker tag react-docker ehmadsaeed/react-docker
+```
+
+We didn't specify a tag here, so it will be tagged `latest` by default.
+
+-   To publish that image, we first need to login with our Docker Hub credentials via the terminal.
+
+```bash
+docker login
+```
+
+-   Then, push our image to Docker Hub. We can see it under the repositories section of our Docker Hub portal.
+
+```bash
+docker push ehmadsaeed/react-docker
+```
+
 -   To enlist the running containers, we can use the following command:
 
 ```bash
 docker ps
 ```
 
--   We can use the container id from the above command to stop that container.
+-   We can use the container ID from the above command to stop that container.
 
 ```bash
 docker stop <container-id>
@@ -46,4 +76,4 @@ docker container prune
 docker rm <container-id>
 ```
 
--   We use `.dockerignore` file to prevent specific files/ directories from pushing to the docker, just like `.gitignore`.
+-   We use a `.dockerignore` file to prevent specific files/ directories from pushing to the docker, just like `.gitignore`.
