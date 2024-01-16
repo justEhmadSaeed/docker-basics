@@ -3,9 +3,9 @@
 In this lesson, we will learn about:
 
 -   How to automate the containerization process
--   How to use Docker compose file
+-   How to use Docker Compose file
 
-## Automate Containerization Process
+## Compose Dockerization Process
 
 Well, it might be hard for us to write so lengthy commands repeatedly. How about automating all of that stuff?
 
