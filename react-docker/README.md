@@ -81,3 +81,7 @@ docker rm <container-id>
 ```
 
 -   We use a `.dockerignore` file to prevent specific files/ directories from pushing to the docker, just like `.gitignore`.
+
+## Next Steps
+
+Tired of remembering and writing all these lengthy commands? Don't worry. It's good to know the basics of Docker commands in the beginning. Anyhow, how about composing all of these settings into a single and simple command? Here comes the next [Automating the Containerization](/compose-docker/README.md) step.
