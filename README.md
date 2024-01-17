@@ -1,4 +1,4 @@
-# DOCKER BASICS
+# DOCKER BASICS 🐳
 
 Docker is great!
 
