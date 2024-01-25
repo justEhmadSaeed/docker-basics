@@ -22,4 +22,5 @@ Learning Docker isn't just about hopping on the latest tech trend – it's about
 1.  [Containerize a simple node app](/hello-docker/)
 2.  [Containerize a React app and publish Docker image](/react-docker/)
 3.  [Automating and Composing Docker](/compose-docker/)
-4.  [Docker Compose Watch (live changes) for a FullStack App](/mern-docker/)
+4.  [Docker Compose Watch (live changes) for a MERN App](/mern-docker/)
+5.  [Containerize a Next.js App](/next-docker/)
